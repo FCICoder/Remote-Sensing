@@ -12,21 +12,23 @@ public class WindowManager {
         this.driver = driver;
         navigate = driver.navigate();
     }
-
+// going back method
     public void goBack(){
         navigate.back();
     }
-
+// going forword method
     public void goForword(){
     navigate.forward();
     }
-
+// go to a specific URL
     public void goToURL(String url){
         navigate.to(url);
     }
 
+// Refresh Method
     public void refresh(){navigate.refresh();}
 
+// Switching method
     public void switchTab(String title){
         Set<String> windowHandles = driver.getWindowHandles();
         System.out.println(windowHandles.size());
